@@ -399,6 +399,10 @@ class FlutterBluePlus {
     } finally {
       mtx.give();
     }
+    Map<int,bool> sMap = {0:false,1:true};
+    if(out.runtimeType == int){
+      return sMap[out]??out;
+    }
 
     return out;
   }
